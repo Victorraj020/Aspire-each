@@ -28,7 +28,7 @@ const HeroSection = () => {
           <div className="absolute -bottom-20 -left-20 w-[600px] h-[600px] bg-navy-900/5 rounded-full blur-[100px]" />
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-0 relative z-10">
+        <div className="container w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-0 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left Content */}
             <motion.div
@@ -80,12 +80,12 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6"
+                className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6"
               >
                 <Button
                   onClick={() => setIsContactOpen(true)}
                   size="lg"
-                  className="w-full sm:w-auto bg-[#002D62] hover:bg-[#0B1238] text-white font-bold px-8 py-6 text-base sm:text-lg rounded-xl shadow-xl shadow-navy-900/20 group transition-all duration-300"
+                  className="w-auto bg-[#002D62] hover:bg-[#0B1238] text-white font-bold px-8 py-6 text-base sm:text-lg rounded-xl shadow-xl shadow-navy-900/20 group transition-all duration-300"
                 >
                   Start Consultation
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -96,7 +96,7 @@ const HeroSection = () => {
                     const el = document.getElementById('testimonials');
                     el?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="w-full sm:w-auto py-3 px-6 text-base sm:text-lg font-bold text-navy-900/60 hover:text-navy-900 transition-colors bg-white sm:bg-transparent rounded-xl shadow-sm sm:shadow-none border border-navy-900/5 sm:border-none"
+                  className="w-auto py-3 px-6 text-base sm:text-lg font-bold text-navy-900/60 hover:text-navy-900 transition-colors bg-white sm:bg-transparent rounded-xl shadow-sm sm:shadow-none border border-navy-900/5 sm:border-none"
                 >
                   Success Stories
                 </button>
@@ -110,9 +110,9 @@ const HeroSection = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               className="relative flex items-center justify-center lg:justify-end w-full"
             >
-              <div className="relative w-full max-w-[600px] aspect-square sm:aspect-[4/3] flex items-center justify-center">
+              <div className="relative w-full max-w-[600px] aspect-square sm:aspect-[4/3] flex items-center justify-center overflow-hidden">
                 <InteractiveCarousel
-                  baseWidth={600}
+                  baseWidth={550}
                   autoplay={true}
                   autoplayDelay={2000}
                   pauseOnHover={true}

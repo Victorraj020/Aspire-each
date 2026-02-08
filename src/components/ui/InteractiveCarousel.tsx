@@ -127,6 +127,8 @@ export default function Carousel({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!containerRef.current) return;
+
     const updateWidth = () => {
       if (containerRef.current) {
         setContainerWidth(containerRef.current.offsetWidth);
@@ -134,14 +136,14 @@ export default function Carousel({
     };
 
     updateWidth();
-    // Add a small delay to ensure layout has settled
-    const timeoutId = setTimeout(updateWidth, 100);
 
-    window.addEventListener('resize', updateWidth);
-    return () => {
-      window.removeEventListener('resize', updateWidth);
-      clearTimeout(timeoutId);
-    };
+    const resizeObserver = new ResizeObserver(() => {
+      updateWidth();
+    });
+
+    resizeObserver.observe(containerRef.current);
+
+    return () => resizeObserver.disconnect();
   }, []);
 
   const containerPadding = 16;

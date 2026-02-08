@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
 import ContactModal from './ContactModal';
@@ -44,8 +44,8 @@ const Navbar = () => {
         {/* Main Navbar */}
         <nav
           className={`transition-all duration-300 ${isScrolled
-              ? 'bg-white/95 backdrop-blur-xl shadow-xl shadow-navy-900/5 border-b border-navy-900/5'
-              : 'bg-transparent'
+            ? 'bg-white/95 backdrop-blur-xl shadow-xl shadow-navy-900/5 border-b border-navy-900/5'
+            : 'bg-transparent'
             }`}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,10 +70,10 @@ const Navbar = () => {
                     key={link.name}
                     to={link.path}
                     className={`text-[15px] font-bold tracking-tight transition-all relative group ${location.pathname === link.path
-                        ? 'text-navy-900'
-                        : isScrolled
-                          ? 'text-navy-900/70 hover:text-navy-900'
-                          : 'text-navy-900/80 hover:text-navy-900'
+                      ? 'text-navy-900'
+                      : isScrolled
+                        ? 'text-navy-900/70 hover:text-navy-900'
+                        : 'text-navy-900/80 hover:text-navy-900'
                       }`}
                   >
                     {link.name}
@@ -111,14 +111,28 @@ const Navbar = () => {
                       to={link.path}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`block w-full text-left py-3 px-4 rounded-xl text-lg font-bold transition-all ${location.pathname === link.path
-                          ? 'bg-navy-900/5 text-navy-900'
-                          : 'text-navy-900/70 hover:bg-navy-900/5 hover:text-navy-900'
+                        ? 'bg-navy-900/5 text-navy-900'
+                        : 'text-navy-900/70 hover:bg-navy-900/5 hover:text-navy-900'
                         }`}
                     >
                       {link.name}
                     </Link>
                   ))}
-                  <div className="pt-6 px-4">
+                  <div className="pt-6 px-4 space-y-4">
+                    <div className="flex flex-col gap-3 pb-4 border-b border-navy-900/5">
+                      <a href="tel:+919324482899" className="flex items-center gap-3 text-navy-900/70 font-bold hover:text-[#002D62]">
+                        <div className="w-8 h-8 rounded-lg bg-navy-900/5 flex items-center justify-center">
+                          <Phone size={16} />
+                        </div>
+                        +91 93244 82899
+                      </a>
+                      <a href="mailto:info@aspireeach.com" className="flex items-center gap-3 text-navy-900/70 font-bold hover:text-[#002D62]">
+                        <div className="w-8 h-8 rounded-lg bg-navy-900/5 flex items-center justify-center">
+                          <Mail size={16} />
+                        </div>
+                        info@aspireeach.com
+                      </a>
+                    </div>
                     <Button
                       onClick={() => {
                         setIsContactOpen(true);
