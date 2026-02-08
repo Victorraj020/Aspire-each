@@ -7,10 +7,15 @@ import Squares from "@/components/ui/Squares";
 import aniketImg from "@/assets/images/Aniket Shinde.png";
 import krantiImg from "@/assets/images/Kranti .png";
 import aboutImg from "@/assets/images/indian-student.png";
+import SEO from "@/components/SEO";
 
 const AboutUs = () => {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
+      <SEO
+        title="About Us"
+        description="Learn about AspireEach, our mission, vision, and the team empowering global minds to achieve their study abroad dreams with 100% visa success."
+      />
       <Navbar />
 
       <main className="flex-grow pt-20">

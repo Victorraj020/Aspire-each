@@ -4,10 +4,15 @@ import Testimonials from "@/components/Testimonials";
 import IndiaFootprint from "@/components/IndiaFootprint";
 import FAQ from "@/components/FAQ";
 import { motion } from "framer-motion";
+import SEO from "@/components/SEO";
 
 const TestimonialsPage = () => {
     return (
         <div className="min-h-screen flex flex-col">
+            <SEO
+                title="Testimonials"
+                description="Read success stories from students who achieved their study abroad dreams with AspireEach. Watch video testimonials and see our global footprint."
+            />
             <Navbar />
 
             <main className="flex-grow pt-20">

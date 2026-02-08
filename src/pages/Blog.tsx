@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { blogs } from "@/data/blogs";
 import { Calendar, User, ArrowRight, Search, Tag } from "lucide-react";
 import Squares from "@/components/ui/Squares";
+import SEO from "@/components/SEO";
 
 const Blog = () => {
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -17,6 +18,10 @@ const Blog = () => {
 
     return (
         <div className="min-h-screen flex flex-col bg-[#FDFBF7]">
+            <SEO
+                title="Blog & Insights"
+                description="Stay updated with the latest study abroad trends, student success stories, and expert advice from AspireEach."
+            />
             <Navbar />
 
             <main className="flex-grow pt-20">

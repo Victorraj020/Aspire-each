@@ -147,10 +147,15 @@ const plans = [
 ];
 
 import Squares from "@/components/ui/Squares";
+import SEO from "@/components/SEO";
 
 const Services = () => {
     return (
         <div className="min-h-screen flex flex-col bg-white">
+            <SEO
+                title="Our Services"
+                description="Explore our comprehensive study abroad services including counseling, university selection, visa assistance, loan support, and exam preparation."
+            />
             <Navbar />
 
             <main className="flex-grow pt-20">

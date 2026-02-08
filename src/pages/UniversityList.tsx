@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, GraduationCap, MapPin, Globe, Star } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const universityData: Record<string, any> = {
     us: {
@@ -66,6 +67,10 @@ const UniversityList = () => {
 
     return (
         <div className="min-h-screen bg-[#FDFBF7]">
+            <SEO
+                title={`Study in ${data.name}`}
+                description={data.description}
+            />
             <Navbar />
 
             {/* Hero Section */}

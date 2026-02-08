@@ -15,10 +15,15 @@ import UniversityTicker from '@/components/UniversityTicker';
 import Testimonials from '@/components/Testimonials';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Home"
+        description="AspireEach - Turn Your Aspiration Into A Global Reality. We provide expert guidance for students aspiring to study abroad in USA, UK, Canada, Australia and more."
+      />
       <Navbar />
       <HeroSection />
       <TopDestinations />

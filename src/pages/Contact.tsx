@@ -15,6 +15,7 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import Squares from "@/components/ui/Squares";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -66,6 +67,10 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen flex flex-col bg-[#FDFBF7]">
+            <SEO
+                title="Contact Us"
+                description="Get in touch with AspireEach for expert study abroad counseling. Call, email, or visit our office in Mumbai."
+            />
             <Navbar />
 
             <main className="flex-grow pt-20">
